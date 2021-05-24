@@ -59,7 +59,7 @@
                     <td>{!! $company->company_name !!}</td>
                     <td>{!! $company->company_web !!}</td>
                     <td>{!! $company->company_phone !!}</td>
-                    <td>{!! $company->category->category_id !!}</td>
+                    <td>{!! $company->category->category_name !!}</td>
                 </tr>
                 @endforeach
 

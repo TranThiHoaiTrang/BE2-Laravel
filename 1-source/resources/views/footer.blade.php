@@ -18,59 +18,8 @@
 </head>
 
 <body>
-
-
-<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
-    <h5 class="my-0 mr-md-auto font-weight-normal">Lập trình backend-web 2</h5>
-    <nav class="my-2 my-md-0 mr-md-3">
-        <a class="p-2 text-dark" href="/companies">Companies</a>
-        <a class="p-2 text-dark" href="/trainers">Trainers</a>
-        <a class="p-2 text-dark" href="/search">Search</a>
-
-    </nav>
-
-</div>
-<form class="form-inline my-2 my-lg-0">
-    <input class="form-control mr-sm-2" type="search" name="search" placeholder="Search" aria-label="Search">
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-</form>
-
-<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-    <h1 class="display-4">Companies</h1>
-
-</div>
-
 <div class="container">
-    <div class="row">
-        <table class="table">
-            <thead>
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">Name</th>
-                <th scope="col">Web</th>
-                <th scope="col">Phone</th>
-                <th scope="col">trainer</th>
-                <th scope="col">Category name</th>
-                
-            </tr>
-            </thead>
-            <tbody>
-                @foreach($companies as $company)
-                <tr>
-                    <th scope="row">{!! $company->company_id !!}</th>
-                    <td>{!! $company->company_name !!}</td>
-                    <td>{!! $company->company_web !!}</td>
-                    <td>{!! $company->company_phone !!}</td>
-                    <td>{!! @$company->trainers['trainer_id']!!}</td>
-                    <td>{!! $company->category->category_name !!}</td>
-                </tr>
-                @endforeach
-
-            </tbody>
-        </table>
-        {!! $companies->render() !!}
-    </div>
-
+    @yield('page')
     <footer class="pt-4 my-md-5 pt-md-5 border-top">
         <div class="row">
             <div class="col-12 col-md">

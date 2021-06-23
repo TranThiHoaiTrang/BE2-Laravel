@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTrainersTable extends Migration
+class CreatePermissionsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,9 @@ class CreateTrainersTable extends Migration
      */
     public function up()
     {
-        Schema::create('trainers', function (Blueprint $table) {
-            $table->increments('trainer_id');
-            $table->string('trainer_name', 55);
-            $table->integer('company_id');
+        Schema::create('permissions', function (Blueprint $table) {
+            $table->increments('permission_id',2);
+            $table->string('permission_name', 55);
             // $table->integer('status',5);
             // $table->softDeletesTz($column = 'deleted_at', $precision = 0);
             $table->timestamps();
@@ -30,6 +29,6 @@ class CreateTrainersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('trainers');
+        Schema::dropIfExists('permissions');
     }
 }

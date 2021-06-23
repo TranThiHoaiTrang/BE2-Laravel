@@ -22,6 +22,8 @@ class CreateCompaniesTable extends Migration
             $table->unsignedBigInteger('category_id');
             $table->foreign('category_id')->references('category_id')->on('categories');
             $table->string('company_phone', 55);
+            // $table->integer('status',5);
+            // $table->softDeletesTz($column = 'deleted_at', $precision = 0);
             $table->timestamps();
         });
     }

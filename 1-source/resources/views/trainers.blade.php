@@ -42,8 +42,6 @@
             <tr>
                 <th scope="col">#</th>
                 <th scope="col">Name</th>
-                <th scope="col">Email</th>
-                <th scope="col">Phone</th>
             </tr>
             </thead>
             <tbody>
@@ -51,8 +49,6 @@
                 <tr>
                     <th scope="row">{!! $trainer->trainer_id !!}</th>
                     <td>{!! $trainer->trainer_name !!}</td>
-                    <td>{!! $trainer->trainer_email !!}</td>
-                    <td>{!! $trainer->trainer_phone !!}</td>
                 </tr>
                 @endforeach
 
